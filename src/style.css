@@ -2,7 +2,7 @@
   max-width: 650px;
   margin: 30px, auto;
   padding: 25px;
-  border: 2px solid #lightgrey;
+  border: 2px solid #bbb;
 }
 h1 {
   color: red;
@@ -14,4 +14,13 @@ height: 26px
 line-height: 26px
 text-align: right
 width: 326px
+}
+
+ul{
+  color: #9aa0a6;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    padding-left: 9px;
+    padding-top: 6px;
 }
