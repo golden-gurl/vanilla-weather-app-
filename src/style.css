@@ -4,11 +4,14 @@
   padding: 25px;
   border: 2px solid #bbb;
 }
+.location-overview{
+  margin-bottom: 20px;
+}
+
 h1 {
-  color: red;
- 
+  color:  #bbb
 font-family: "Google Sans", Roboto, arial, sans-serif
-font-size: 22px
+font-size: 35px
 font-weight: 400
 height: 26px
 line-height: 26px
@@ -17,7 +20,7 @@ width: 326px
 }
 
 ul{
-  color: #9aa0a6;
+  color: #0a0c0e;
     font-size: 12px;
     line-height: 16px;
     padding-left: 9px;
