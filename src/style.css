@@ -22,4 +22,5 @@ ul{
     line-height: 16px;
     padding-left: 9px;
     padding-top: 6px;
+    list-style: none;
 }
