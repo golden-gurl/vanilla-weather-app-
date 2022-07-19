@@ -27,7 +27,9 @@
   position: relative;
   font-size: 16px;
 }
-
+.ferinheit {
+  color: #0a0c0e;
+}
 h1 {
   color: rgb(165, 141, 141);
   font-size: 28px;
