@@ -5,8 +5,27 @@
   padding: 10px;
 }
 .location-overview {
-  margin-bottom: 10px;
-  font: 100px;
+  margin-bottom: 30spx;
+}
+
+.weather-temp img {
+  margin-bottom: 30;
+  height: 65px;
+  width: 65px;
+}
+
+.weather-temp strong {
+  font-size: 50px;
+  color: rgb(105, 105, 142);
+  font-weight: 400;
+  display: inline;
+  line-height: 1;
+}
+
+.weather-temp small {
+  color: black;
+  position: relative;
+  font-size: 16px;
 }
 
 h1 {
