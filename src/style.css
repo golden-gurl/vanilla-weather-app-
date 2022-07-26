@@ -6,7 +6,7 @@
 
 .weather-app {
   max-width: 700px;
-  border: 2px solid #bbb;
+  border: 2px solid #777eb1;
   padding: 10px;
 }
 .location-overview {
@@ -36,7 +36,7 @@
 }
 
 h1 {
-  color: rgb(80, 30, 30);
+  color: #777eb1;
   font-size: 28px;
   line-height: 30px;
   margin: 0;
