@@ -15,52 +15,55 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+
     <title>Weather App</title>
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <div class="location-overview">
-          <h1 id="cityName"></h1>
-          <ul>
-            <li id="day">Friday 04:20</li>
-            <li id="cityCondition"></li>
-          </ul>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <div class="d-flex weather-temp">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                alt="sunny"
-                class="float-left"
-              />
-              <div class="float-left">
-                <strong id="Temp"></strong>
-                <span class="units"> C° | <a href="#"> F°</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
+      <div class="whole-page">
+        <div class="weather-app">
+          <div class="location-overview">
+            <h1 id="cityName"></h1>
             <ul>
-              <li>Humidity: <span id="humidity"></span> %</li>
-              <li>Wind: <span id="wind"></span></li>
+              <li>Last updated at: <span id="date"></span></li>
+              <li id="cityCondition"></li>
             </ul>
           </div>
+          <div class="row">
+            <div class="col-6 box-One">
+              <div class="d-flex weather-temp">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt="sunny"
+                  class="float-left"
+                />
+                <div class="float-left">
+                  <strong id="Temp"></strong>
+                  <span class="units"> C° | <a href="#"> F°</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul class="weather-details">
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> Km/h</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <small>
-        <a
-          href="https://github.com/golden-gurl/vanilla-weather-app-"
-          class="lower-code-info"
-          target="_blank"
-          >Open-source code
-        </a>
-        by <a href="https://github.com/golden-gurl"> Monique Gold</a>
-      </small>
+        <small>
+          <a
+            href="https://github.com/golden-gurl/vanilla-weather-app-"
+            class="lower-code-info"
+            target="_blank"
+            >Open-source code
+          </a>
+          by <a href="https://github.com/golden-gurl"> Monique Gold</a>
+        </small>
+      </div>
     </div>
     <script src="src/index.js"></script>
   </body>
