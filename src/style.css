@@ -47,6 +47,9 @@ ul {
   margin: 0;
   padding: 0;
 }
+li:firstletter {
+  text-transform: capitalize;
+}
 
 li {
   font: 16px;
@@ -54,7 +57,4 @@ li {
   font-display: bold;
   color: #0a0c0e;
   list-style: none;
-}
-li:firstletter {
-  text-transform: capitalize;
 }
