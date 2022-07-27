@@ -25,6 +25,20 @@
       <div class="whole-page">
         <div class="weather-app">
           <div class="location-overview">
+            <div class="row">
+              <div class="col-9">
+              <form id="search-form">
+                <input
+                  form="search"
+                  placeholder="Search for a city.."
+                  class="form-control"
+                />
+                </div>
+                <div class="col-3">
+                <input type="submit" placeholder="" />
+                </div>
+              </form>
+            </div>
             <h1 id="cityName"></h1>
             <ul>
               <li>Last updated at: <span id="date"></span></li>
@@ -34,7 +48,7 @@
           <div class="row">
             <div class="col-8">
               <div class="d-flex weather-temp">
-                <img src="" id="weather-icon" alt="sunny" class="float-left" />
+                <img src="" id="weather-icon" alt="" class="float-left" />
                 <div class="float-left">
                   <strong id="Temp"></strong>
                   <span class="units"> C° | <a href="#"> F°</a></span>
