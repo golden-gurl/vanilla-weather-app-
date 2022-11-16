@@ -21,6 +21,7 @@ function formatDate(timestamp) {
   return `${day} ${hours} : ${minutes}`;
 }
 
+
 function displayTemp(response) {
   let cityElement = document.querySelector("#cityName");
   let tempElement = document.querySelector("#Temp");
@@ -44,11 +45,25 @@ function displayTemp(response) {
     "alt",
     `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
   );
+
+
 }
-
-let apiKey = `5d5058b9c4b2f291c2f88009101bb780`;
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
-
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputSearch = document.querySelector("#city-input");
+ console.log(cityInputSearch);
+  search(cityInputSearch.value);
+}
+function search(cityName){
+let apiKey = `c332cfb50649ae3bbb3de721581b0319`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 console.log(apiUrl);
 
 axios.get(apiUrl).then(displayTemp);
+}
+
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit); 
+
+search("Sarasota");
