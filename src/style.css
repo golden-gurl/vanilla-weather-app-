@@ -31,9 +31,13 @@
   position: fixed;
   font-size: 16px;
 }
-.ferinheit {
+.weather-temp .active:hover {
   color: #0a0c0e;
+  cursor:default;
+  text-decoration: none;
+  
 }
+
 
 h1 {
   color: #777eb1;
@@ -58,3 +62,4 @@ li {
   color: #0a0c0e;
   list-style: none;
 }
+

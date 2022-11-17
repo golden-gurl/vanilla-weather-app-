@@ -24,14 +24,14 @@ function formatDate(timestamp) {
 
 function displayTemp(response) {
   let cityElement = document.querySelector("#cityName");
-  let tempElement = document.querySelector("#Temp");
+  let tempElement = document.querySelector("#temp");
   let condtionElement = document.querySelector("#cityCondition");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#weather-icon");
-
-  tempElement.innerHTML = response.data.main.temp;
+  celiusTemperature = response.data.main.temp;
+  tempElement.innerHTML = Math.round(celiusTemperature);
   cityElement.innerHTML = response.data.name;
   condtionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
@@ -62,8 +62,29 @@ console.log(apiUrl);
 axios.get(apiUrl).then(displayTemp);
 }
 
+function displayfaren(event){
+  event.preventDefault();
+  let farenTemperature = (celiusTemperature * 9 ) / 5 + 32;
+  let tempElement = document.querySelector("#temp");
+  tempElement.innerHTML = Math.round(farenTemperature);
+}
+
+
+function displaycelius(event){
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp");
+  tempElement.innerHTML = Math.round(celiusTemperature);
+}
+
+let celiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit); 
+
+let farenLink = document.querySelector("#faren-link");
+farenLink.addEventListener("click", displayfaren);
+
+let celiusLink = document.querySelector("#celius-link");
+celiusLink.addEventListener("click", displaycelius);
 
 search("Sarasota");
