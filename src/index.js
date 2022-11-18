@@ -66,6 +66,8 @@ function displayfaren(event){
   event.preventDefault();
   let farenTemperature = (celiusTemperature * 9 ) / 5 + 32;
   let tempElement = document.querySelector("#temp");
+  celiusLink.classList.remove("active");
+  farenLink.classList.add("active");
   tempElement.innerHTML = Math.round(farenTemperature);
 }
 
@@ -73,6 +75,8 @@ function displayfaren(event){
 function displaycelius(event){
   event.preventDefault();
   let tempElement = document.querySelector("#temp");
+  farenLink.classList.remove("active");
+  celiusLink.classList.add("active");
   tempElement.innerHTML = Math.round(celiusTemperature);
 }
 
