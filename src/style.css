@@ -49,15 +49,18 @@ cursor:default;
 }
 
 .weather-forecast-day{
-  opacity: 0.5;
+  opacity: 0.8;
 }
+.weather-forecast-tempertaure-min{
+  opacity: 0.5;
 
+}
 
 h1 {
   color: #777eb1;
   font-size: 28px;
   line-height: 30px;
-  margin: 0;
+  margin: 5px;
   padding: 0px;
 }
 

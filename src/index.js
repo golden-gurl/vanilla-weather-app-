@@ -20,6 +20,26 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours} : ${minutes}`;
 }
+function displayForecast(){
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thurs", "Fri", "Sat", "Sun"];
+  days.forEach(function (day){
+  forecastHTML =
+   forecastHTML + 
+    ` <div class="col-2">
+      <div class ="weather-forecast-day">${day}</div>
+       <img src="" alt=""/>              
+      <div class="weather-forecast-tempertaures">
+      <span class="weather-forecast-tempertaure-max">18°</span> 
+      <span class="weather-forecast-tempertaure-min">14°</span>
+      </div>
+      </div>
+`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+}
 
 
 function displayTemp(response) {
@@ -51,7 +71,7 @@ function displayTemp(response) {
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputSearch = document.querySelector("#city-input");
- console.log(cityInputSearch);
+ //console.log(cityInputSearch);
   search(cityInputSearch.value);
 }
 function search(cityName){
@@ -92,3 +112,4 @@ let celiusLink = document.querySelector("#celius-link");
 celiusLink.addEventListener("click", displaycelius);
 
 search("Sarasota");
+displayForecast();
